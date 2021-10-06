@@ -23,3 +23,5 @@ app.use("/api/menu/items",itemsRouter);
 app.listen(PORT, () => {
     console.log(`Listening to port ${PORT}`);
 })
+
+export default app;

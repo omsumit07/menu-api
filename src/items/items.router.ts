@@ -10,7 +10,8 @@ export const itemsRouter = express.Router();
 itemsRouter.get("/", async (req : Request, res: Response) => {
     try {
         const items: Item[] = await ItemService.findAll();
-        res.status(200).send(items)
+        //res.status(200).send(items)
+        res.status(200).send("Testing");
     } catch(e:any){
         res.status(500).send(e.message);
     }
