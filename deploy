@@ -1,0 +1,11 @@
+-#!/bin/sh
+ssh ubuntu@13.127.145.174 < cd ~/menu-api
+git pull origin master
+npm cache clean -f
+npm install -g n
+sudo n latest
+npm install
+npm install -g nodemon pm2
+pm2 restart all
+exit
+EOF
